@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="8" time="2.422949">
+<testcase classname="Ensure the External Property Link Api - Create Property Link endpoint works correctly" name="Ensure I can create a property link successfully" time="1.151713">
+<failure message="java.lang.AssertionError: 1 expectation failed.&#10;Expected status code &lt;202&gt; but was &lt;400&gt;.&#10;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)&#10;&#9;at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)&#10;&#9;at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)&#10;&#9;at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)&#10;&#9;at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)&#10;&#9;at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)&#10;&#9;at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:483)&#10;&#9;at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)&#10;&#9;at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)&#10;&#9;at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)&#10;&#9;at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)&#10;&#9;at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:89)&#10;&#9;at com.cucumber.steps.BaseStep.assertLatestResponse(BaseStep.java:27)&#10;&#9;at com.cucumber.steps.CommonSteps.assertStatusCode(CommonSteps.java:99)&#10;&#9;at ✽.Then the status code 202 is returned(externalpropertylinkmanagementapi/CreatePropertyLink.feature:17)&#10;"><![CDATA[Given I have a new request with the following details.......................passed
+And I add a Create Property Link json payload to my request with the following details.passed
+When I send the request to the External Property Link Management Api to create the property link.passed
+Then the status code 202 is returned........................................failed
+
+StackTrace:
+java.lang.AssertionError: 1 expectation failed.
+Expected status code <202> but was <400>.
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:483)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:89)
+	at com.cucumber.steps.BaseStep.assertLatestResponse(BaseStep.java:27)
+	at com.cucumber.steps.CommonSteps.assertStatusCode(CommonSteps.java:99)
+	at ✽.Then the status code 202 is returned(externalpropertylinkmanagementapi/CreatePropertyLink.feature:17)
+]]></failure>
+</testcase>
+<testcase classname="Ensure the NDR List Management API - Basic Search endpoint" name="Ensure the NDR List Management Basic Search postcode search works correctly" time="0.724251">
+<system-out><![CDATA[Given I have a new request with the following details.......................passed
+When I send the request to NDR List Management API 'GET Basic Search' endpoint.passed
+Then the status code 200 is returned........................................passed
+And all of the fields returned with jsonPath 'NDRListItems.address' contains the string 'LS1'.passed
+]]></system-out>
+</testcase>
+<testcase classname="Ensure the NDR List Management API - Basic Search endpoint" name="Ensure the NDR List Management Basic Search postcode search works correctly 2" time="0.294635">
+<system-out><![CDATA[Given I have a new request with the following details.......................passed
+When I send the request to NDR List Management API 'GET Basic Search' endpoint.passed
+Then the status code 200 is returned........................................passed
+And all of the fields returned with jsonPath 'NDRListItems.address' contains the string 'SL1'.passed
+]]></system-out>
+</testcase>
+<testcase classname="Ensure the NDR List Management API - Basic Search endpoint" name="Asserting multiple values of the Basic Search response" time="0.129565">
+<system-out><![CDATA[Given I have a new request with the following details.......................passed
+When I send the request to NDR List Management API 'GET Basic Search' endpoint.passed
+Then the status code 200 is returned........................................passed
+And the following fields and their values are returned successfully.........passed
+]]></system-out>
+</testcase>
+<testcase classname="Ensure the NDR List Management API - Basic Search endpoint" name="Negative testing of NDR List Management Basic Search parameters" time="0.033036">
+<system-out><![CDATA[Given I have the test mandatory startPoint value missing....................passed
+And I have a new request with the following details.........................passed
+When I send the request to NDR List Management API 'GET Basic Search' endpoint.passed
+Then the status code 400 is returned........................................passed
+And the field with jsonPath 'errorMessage' is equal to 'org.mule.api.MessagingException: Invalid value '' for query parameter startPoint. Integer required (org.mule.module.apikit.exception.InvalidQueryParameterException).'.passed
+]]></system-out>
+</testcase>
+<testcase classname="Ensure the NDR List Management API - Basic Search endpoint" name="Negative testing of NDR List Management Basic Search parameters 2" time="0.030478">
+<system-out><![CDATA[Given I have the test pageSize = 0..........................................passed
+And I have a new request with the following details.........................passed
+When I send the request to NDR List Management API 'GET Basic Search' endpoint.passed
+Then the status code 400 is returned........................................passed
+And the field with jsonPath 'errorMessage' is equal to 'org.mule.api.MessagingException: Invalid value '0' for query parameter pageSize. Value is below the minimum 1 (org.mule.module.apikit.exception.InvalidQueryParameterException).'.passed
+]]></system-out>
+</testcase>
+<testcase classname="Ensure the NDR List Management API - Basic Search endpoint" name="Negative testing of NDR List Management Basic Search parameters 3" time="0.024423">
+<system-out><![CDATA[Given I have the test pageSize = -1.........................................passed
+And I have a new request with the following details.........................passed
+When I send the request to NDR List Management API 'GET Basic Search' endpoint.passed
+Then the status code 400 is returned........................................passed
+And the field with jsonPath 'errorMessage' is equal to 'org.mule.api.MessagingException: Invalid value '-1' for query parameter pageSize. Value is below the minimum 1 (org.mule.module.apikit.exception.InvalidQueryParameterException).'.passed
+]]></system-out>
+</testcase>
+<testcase classname="Ensure the NDR List Management API - Basic Search endpoint" name="Negative testing of NDR List Management Basic Search parameters 4" time="0.034848">
+<failure message="java.lang.AssertionError: 1 expectation failed.&#10;JSON path errorMessage doesn't match.&#10;Expected: VOAException Postcode entry too short:&#10;  Actual: VOAException Postcode entry too short: &#10;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)&#10;&#9;at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)&#10;&#9;at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)&#10;&#9;at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)&#10;&#9;at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:483)&#10;&#9;at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)&#10;&#9;at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:89)&#10;&#9;at com.cucumber.steps.BaseStep.assertLatestResponse(BaseStep.java:27)&#10;&#9;at com.cucumber.steps.CommonSteps.assertFieldValue(CommonSteps.java:170)&#10;&#9;at com.cucumber.steps.CommonSteps.assertJsonField(CommonSteps.java:104)&#10;&#9;at ✽.And the field with jsonPath 'errorMessage' is equal to 'VOAException Postcode entry too short:'(ndrlistmanagementapiold/BasicSearchTests.feature:61)&#10;"><![CDATA[Given I have the test missing mandatory param postcode......................passed
+And I have a new request with the following details.........................passed
+When I send the request to NDR List Management API 'GET Basic Search' endpoint.passed
+Then the status code 400 is returned........................................passed
+And the field with jsonPath 'errorMessage' is equal to 'VOAException Postcode entry too short:'.failed
+
+StackTrace:
+java.lang.AssertionError: 1 expectation failed.
+JSON path errorMessage doesn't match.
+Expected: VOAException Postcode entry too short:
+  Actual: VOAException Postcode entry too short: 
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:483)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validate(ResponseSpecificationImpl.groovy:89)
+	at com.cucumber.steps.BaseStep.assertLatestResponse(BaseStep.java:27)
+	at com.cucumber.steps.CommonSteps.assertFieldValue(CommonSteps.java:170)
+	at com.cucumber.steps.CommonSteps.assertJsonField(CommonSteps.java:104)
+	at ✽.And the field with jsonPath 'errorMessage' is equal to 'VOAException Postcode entry too short:'(ndrlistmanagementapiold/BasicSearchTests.feature:61)
+]]></failure>
+</testcase>
+</testsuite>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--<context:component-scan bhbs-package="com.c4.cucumber.common"/>-->
+    <context:component-scan base-package="com.service"/>
+    <context:component-scan base-package="com.support"/>
+
+    <!--<bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">-->
+        <!--<property name="scopes">-->
+            <!--<map>-->
+                <!--<entry key="cucumber-glue">-->
+                    <!--<bean class="cucumber.runtime.java.spring.GlueCodeScope"/>-->
+                <!--</entry>-->
+            <!--</map>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <beans profile="local">
+        <context:property-placeholder location="classpath:environments/local.properties" ignore-unresolvable="true" />
+    </beans>
+    <beans profile="ci2">
+        <context:property-placeholder location="classpath:environments/ci2.properties" ignore-unresolvable="true" />
+    </beans>
+
+</beans>
